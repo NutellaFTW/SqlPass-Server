@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SqlPass-Server:jar">
+    <output-path>$PROJECT_DIR$/../../SqlPass_Test</output-path>
+    <root id="archive" name="SqlPass-Server.jar">
+      <element id="module-output" name="SqlPass-Server" />
+    </root>
+  </artifact>
+</component>

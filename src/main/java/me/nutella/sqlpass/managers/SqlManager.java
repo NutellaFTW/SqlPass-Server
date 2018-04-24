@@ -27,7 +27,7 @@ public class SqlManager {
         } catch (Exception e) {
             Utils.sendError("Could not Connect To Database. (Information may be invalid)", e.getStackTrace(), e.getCause().getMessage());
         }
-        Executors.newCachedThreadPool(new ThreadFactoryBuilder().setDaemon(true).setNameFormat("SQL Thread - #%d").build());
+        sqlService = Executors.newCachedThreadPool(new ThreadFactoryBuilder().setDaemon(true).setNameFormat("SQL Thread - #%d").build());
     }
 
     public void submitToDatabase(String statement, Client client) {

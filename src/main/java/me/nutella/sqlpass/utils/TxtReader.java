@@ -22,7 +22,7 @@ public class TxtReader {
         try(Stream<String> stringStream = Files.lines(Paths.get(file.getName()))) {
             stringStream.forEach(string -> lines.add(string));
         } catch (IOException e) {
-            e.printStackTrace();
+            Utils.sendError("Could not read file.", e.getStackTrace(), e.getCause().getMessage());
         }
     }
 
